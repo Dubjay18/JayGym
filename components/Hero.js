@@ -8,7 +8,7 @@ function Hero() {
         <Image src={banner} layout="fill" />
       </div> */}
       <div
-        class="hero min-h-screen"
+        class="hero min-h-[110vh]"
         style={{ backgroundImage: `url(${banner.src})` }}
       >
         <div className="rounded-full left-11 h-52 w-52 absolute bg-accent opacity-40 animate-bounce"></div>

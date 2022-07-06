@@ -12,6 +12,7 @@ import Navbar from "../../components/Navbar";
 import ExerciseVideos from "../../components/ExerciseVideos";
 import SimilarExercises from "../../components/SimilarExercises";
 import { SocialIcon } from "react-social-icons";
+import Head from "next/head";
 function ExercisesDetails({ exerciseDetailData }) {
   const [exerciseDetail, setExerciseDetail] = React.useState({});
   const [exerciseVideos, setExerciseVideos] = useState([]);
@@ -68,6 +69,38 @@ function ExercisesDetails({ exerciseDetailData }) {
       data-theme={"cupcake"}
       className={" bg-base-100 font-poppins min-h-screen overflow-x-hidden"}
     >
+      <Head>
+        <title>JayGym</title>
+        <meta
+          name="description"
+          content="A site that recommends exercises that will change your life."
+        />
+
+        <meta property="og:url" content="https://jay-gym.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="JayGym" />
+        <meta
+          property="og:description"
+          content="A site that recommends exercises that will change your life."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dubinx/image/upload/v1657130338/Screenshot_2022-07-06_185551_lp0opc.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="jay-gym.vercel.app" />
+        <meta property="twitter:url" content="https://jay-gym.vercel.app/" />
+        <meta name="twitter:title" content="JayGym" />
+        <meta
+          name="twitter:description"
+          content="A site that recommends exercises that will change your life."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dubinx/image/upload/v1657130338/Screenshot_2022-07-06_185551_lp0opc.jpg"
+        />
+      </Head>
       <Navbar detailPage={true} />
       <div className="grid md:grid-cols-2 gap-4 mx-10 h-full ">
         <div>

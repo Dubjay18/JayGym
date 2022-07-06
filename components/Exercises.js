@@ -51,7 +51,7 @@ function Exercises({ exercises, bodyPart, setExercises, Data, exercisesRef }) {
       </div>
     );
   return (
-    <div className="min-h-[80vh] mx-4" ref={exercisesRef}>
+    <div className="min-h-[80vh] mx-4 exercise" ref={exercisesRef}>
       <h1 className="text-base-content my-7 text-lg">Showing results</h1>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4">
         {currentExercises.map((e, i) => {
