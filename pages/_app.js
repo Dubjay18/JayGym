@@ -1,6 +1,7 @@
 import { StateProvider } from "../stateProvider";
 import reducer, { initialState } from "./../reducer";
 import "../styles/globals.css";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
