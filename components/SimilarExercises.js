@@ -3,11 +3,11 @@ import HorizontalScroll from "./HorizontalScroll";
 HorizontalScroll;
 function SimilarExercises({ targetMuscleExercises, equipmentExercises }) {
   return (
-    <div className="mt-10">
+    <div className="mt-10 mx-10">
       <p className="font-bold text-lg my-9">
         Similar <span className="text-primary">Target Muscle</span> exercises
       </p>
-      <p className="flex relative p-2 overflow-x-scroll">
+      <p className="flex relative my-10  overflow-x-scroll hoz-scrollbar">
         {targetMuscleExercises.length !== 0 ? (
           <HorizontalScroll data={targetMuscleExercises} />
         ) : (
@@ -19,7 +19,7 @@ function SimilarExercises({ targetMuscleExercises, equipmentExercises }) {
       <p s>
         Similar <span className="text-primary">Equipment</span> exercises
       </p>
-      <div className="flex relative p-2 overflow-x-scroll">
+      <div className="flex relative my-10 overflow-x-scroll hoz-scrollbar">
         {equipmentExercises.length !== 0 ? (
           <HorizontalScroll data={equipmentExercises} />
         ) : (

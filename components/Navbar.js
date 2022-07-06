@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import logo from "../assets/images/Logo.png";
-function Navbar({ detailPage }) {
+function Navbar({ detailPage, refScroll, exercisesRef }) {
   const [notTrans, setNotTrans] = useState(false);
   const changeNavBg = () => {
     window.scrollY >= 90 ? setNotTrans(true) : setNotTrans(false);
@@ -26,10 +26,16 @@ function Navbar({ detailPage }) {
         </div>
         <div className="navbar-end mr-6">
           <ul className="flex items-center justify-between md:w-1/2 w-full">
-            <li className="border-b-2 border-primary">
+            <li className={`${!detailPage && "border-b-2 border-primary"}`}>
               <Link href={"/"}>Home</Link>
             </li>
-            <li>Exercises</li>
+            {refScroll ? (
+              <li onClick={refScroll}>Exercises</li>
+            ) : (
+              <li className={`${detailPage && "border-b-2 border-primary"}`}>
+                Exercises
+              </li>
+            )}
           </ul>
         </div>
       </div>

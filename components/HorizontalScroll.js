@@ -30,11 +30,7 @@ function HorizontalScroll({ data, bodyParts, setBodyPart, bodyPart }) {
       <div className="left-arrow btn btn-circle btn-ghost">
         <ArrowRightIcon
           onClick={() => {
-            scrool.current.scrollIntoView({
-              left: scrool.current.scrollX + 100,
-              behavior: "smooth",
-            });
-            console.log(scrool.current.scrollX);
+            window.scrollTo({ left: 300, behavior: "smooth" });
           }}
           className="w-7 text-primary cursor-pointer"
         />
@@ -43,7 +39,7 @@ function HorizontalScroll({ data, bodyParts, setBodyPart, bodyPart }) {
   };
   return (
     <div className="">
-      <div className="py-10 flex overflow-x-auto" ref={scrool}>
+      <div className="py-10 flex overflow-x-auto hoz-scrollbar" ref={scrool}>
         {data &&
           data?.map((e, i) => {
             return (

@@ -21,16 +21,7 @@ function ExerciseCard({ item, similar }) {
     typeof window === "undefined"
       ? Buffer.from(str).toString("base64")
       : window.btoa(str);
-  // if (!item) {
-  //   return (
-  //     <div className="flex justify-center items-center min-h-16">
-  //       <h1>Loading...</h1>
-  //     </div>
-  //   );
-  // }
-  useEffect(() => {
-    console.log(item, "item");
-  }, []);
+
   return (
     <div
       className={`card w-auto border-t-2 border-accent bg-base-100 shadow-xl ${

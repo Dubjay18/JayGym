@@ -87,6 +87,10 @@ h1 {
   background-color: #0bd4ba !important;
   border-radius: 5px;
 }
+.hoz-scrollbar::-webkit-scrollbar {
+  background-color: transparent !important;
+  width: 3px;
+}
 .tab.tab-active {
   border-color: #a3e635;
   color: #a3e635 !important;

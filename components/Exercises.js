@@ -3,7 +3,7 @@ import ExerciseCard from "./ExerciseCard";
 import { fetchData, defaultOptions } from "./../utils/fetchData";
 import ReactPaginate from "react-paginate";
 
-function Exercises({ exercises, bodyPart, setExercises, Data }) {
+function Exercises({ exercises, bodyPart, setExercises, Data, exercisesRef }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [exercisesPerPage] = useState(16);
 
@@ -51,7 +51,7 @@ function Exercises({ exercises, bodyPart, setExercises, Data }) {
       </div>
     );
   return (
-    <div className="min-h-[80vh] mx-4">
+    <div className="min-h-[80vh] mx-4" ref={exercisesRef}>
       <h1 className="text-base-content my-7 text-lg">Showing results</h1>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4">
         {currentExercises.map((e, i) => {
